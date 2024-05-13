@@ -12,26 +12,50 @@ main.presta {
     margin: 0 auto;
 }
 
-main section.presta {
+main section.presta{
     width: 19rem;
     margin: 1rem;
     padding: 1rem;
     border-radius: .5rem;
     border-style: solid;
     border-width: .1rem;
+    cursor: pointer;
+    transition: .4s;
 }
-main section.presta ul li img{
-    max-width: 100%;
+main section.presta:hover{
+    transform: scale(1.04);
+    transition: .4s;
 }
-main section.presta ul h2{
+main section.presta ul li img,section.prestavue ul li img{
+    width: 100%;
+    height: 13rem;
+}
+main section.presta ul h2, section.prestavue ul h2{
     text-align: center;
     margin-bottom: 1rem;
+}
+section.prestavue{
+    width: 19rem;
+    margin: 0rem 2rem 7rem 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border-style: solid;
+    border-width: .1rem;
+    height: 100%;
+    background-color: #fff;
 }
 main form{
     width: 30rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+main form.mdp{
+    align-items: center;
+}
+main form.mdp div{
+    display: flex;
+    flex-direction: column;
 }
 main div.container{
     width: 50rem;
@@ -81,11 +105,19 @@ main.profil section.alo{
     border-style: solid;
     border-width: .1rem;
     border-radius: .5rem;
+    height: 100%;
+}
+main.profil section.alo a:hover{
+    background-color: rgba(31, 31, 31, 0.092);
+    transition: .7s;
+}
+main.profil section.alo a{
+    transition: .7s;
 }
 main.profil section a{
     padding: .7rem;
 }
-main.profil form{
+main.profil form,section.right{
     width: 55rem;
     margin: 0 ;
     background-color: #fff;
@@ -93,6 +125,30 @@ main.profil form{
     margin-bottom: 2rem;
     border-style: solid;
     border-width: .1rem;
+    border-radius: .5rem;
+}
+section.right{
+    display: flex;
+    flex-direction: column;
+}
+section.right section{
+    width: 50rem;
+}
+section.right section ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+section.right section ul div.right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+section.right section ul li img{
+    width: 20rem;
+    border-style: solid;
+    border-width: .1rem;
+    padding: .5rem;
     border-radius: .5rem;
 }
 main.profil form h2{
@@ -117,6 +173,18 @@ main.profil form input{
 }
 .hidden {
     display: none;
+}
+#btn_supprimer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    background-color: #ff7f7f;
+    border: 4px double #ff0000;
+    border-radius: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding: .6rem;
+    cursor: pointer;
 }
 
 

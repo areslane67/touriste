@@ -1,8 +1,12 @@
 <section class="alo">
-            <a href="./profil.php">parametres generaux</a>
-            <a href="./mdp.php">mot de passes</a>
-            <a href="./entreprise.php">informations entreprises</a>
-            <a href="./prestation.php">creation de prestation</a>
-            <a href="./gesprestation.php">gestion de prestation</a>
-            <a href="./suppression.php">supprimer son compte</a>
+    <a href="./profil.php">Paramètres généraux</a>
+    <a href="./mdp.php">Mot de passe</a>
+    <?php
+    // Vérifie si l'utilisateur est un prestataire
+    if($_SESSION['role'] == 'prestataire') {
+        echo '<a href="./prestation.php">Création de prestation</a>';
+        echo '<a href="./gesprestation.php">Gestion de prestation</a>';
+    }
+    ?>
+    <a href="./suppression.php">Supprimer son compte</a>
 </section>

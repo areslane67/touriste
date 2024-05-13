@@ -2,6 +2,7 @@
 include_once ("./src/session.inc.php");
 include_once("./src/data.inc.php");
 include_once("./src/addpresta.inc.php");
+include_once("./src/prestacheck.inc.php");
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +23,29 @@ include_once("./src/addpresta.inc.php");
     <?php
     include_once "./template/nav.php";
     ?>
-        <form method="post" class="login">
-                        <label>libelet*</label>
-                        <input type="text" name="libelet" aria-labelledby="libelet"  id="libelet" placeholder="libelet" aria-required="true">
-                        <label>tarif*</label>
-                        <input type="text" name="tarif" aria-labelledby="tarif"  id="tarif" placeholder="tarif" aria-required="true">
-                        <label>description*</label>
-                        <input type="description" name="description" aria-labelledby="description"  id="description" placeholder="description" aria-required="true" autofocus>
-                        <label>image*</label>
-                        <input type="url" id="URL" name="image" placeholder="URL" aria-required="true" required>
-                        <input class="ok" type="submit" aria-label="Envoyer" value="CREE VOTTR prestation" id="ex">
-                    </form>   
+        <form method="post" class="mdp">
+
+            <h2>Cree ta prestation</h2>
+
+            <div>
+                <label>libelet*</label>
+                <input type="text" name="libelet" aria-labelledby="libelet"  id="libelet" placeholder="libelet" aria-required="true">
+            </div>
+            <div>
+                <label>tarif*</label>
+                <input type="text" name="tarif" aria-labelledby="tarif"  id="tarif" placeholder="tarif" aria-required="true">
+            </div>
+            <div>
+                <label>description*</label>
+                <input type="description" name="description" aria-labelledby="description"  id="description" placeholder="description" aria-required="true" autofocus>
+            </div>
+            <div>
+                <label>image*</label>
+                <input type="url" id="URL" name="image" placeholder="URL" aria-required="true" required>
+            </div>
+                <input class="ok" type="submit" aria-label="Envoyer" value="CREE VOTTR prestation" id="ex">
+                
+        </form>   
     </main>
     <?php
     include_once("./template/footer.php");
