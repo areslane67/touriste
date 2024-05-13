@@ -1,0 +1,47 @@
+/* Reset général */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset des éléments de base */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+}
+
+/* Listes */
+ul, ol {
+    list-style: none;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Polices */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Mise en page de base */
+body {
+    line-height: 1.5;
+}
+
+/* Formulaires */
+input, button, textarea, select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+}
+
+/* Réinitialisation des éléments spécifiques */
+/* Ajoutez des réinitialisations spécifiques en fonction de vos besoins */
+

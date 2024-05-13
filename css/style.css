@@ -1,0 +1,122 @@
+
+body{
+    background-color: rgb(200,200,200,.3);
+}
+main{
+    margin-top: 5rem;
+}
+main.presta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    margin: 0 auto;
+}
+
+main section.presta {
+    width: 19rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border-style: solid;
+    border-width: .1rem;
+}
+main section.presta ul li img{
+    max-width: 100%;
+}
+main section.presta ul h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+main form{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+main div.container{
+    width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem 0rem;
+}
+main form input,select{
+    padding: .2rem;
+    border-style: solid;
+    border-width: .02rem;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+main form input.ok{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    background-color: #719fee;
+    border-radius: 1rem;
+    border: 4px double #1f69ec;
+    color: #ffffff;
+    text-align: center;
+    padding: .6rem;
+    cursor: pointer;
+}
+main a.insc{
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1f69ec;
+    text-decoration: underline;
+}
+main p.warning{
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+main.profil{
+    display: flex;
+}
+main.profil section.alo{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 0rem 2rem 7rem 10rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-radius: .5rem;
+}
+main.profil section a{
+    padding: .7rem;
+}
+main.profil form{
+    width: 55rem;
+    margin: 0 ;
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-radius: .5rem;
+}
+main.profil form h2{
+    margin: 2rem 0rem;
+}
+main.profil form input.ok{
+    margin:  0 auto;
+    margin-top: 3rem;
+}
+main.profil form div.principal{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:space-between;
+}
+main.profil form div.principal div{
+    display: flex;
+    flex-direction: column;
+}
+main.profil form input{
+    width: 26rem;
+    height: 3rem;
+}
+.hidden {
+    display: none;
+}
+
+

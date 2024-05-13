@@ -1,0 +1,55 @@
+/* footer */
+
+footer p{
+    text-align: center;
+    padding: 2rem;
+    color: white;
+} 
+footer{
+    background-color:rgba(32, 34, 37, .7);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .plus, footer .reseau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer h3{
+    color: white;
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+footer section img{
+    margin: 0rem 1rem ;
+    transition: 1s;
+}
+footer img:hover{
+    transform: scale(1.2);
+    transition: .3s all ease-in-out;
+}
+footer .plus div{
+    display: flex;
+    align-items: center;
+}
+footer .plus div.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .plus div.flex div{
+    margin-bottom: .5rem;
+}
+footer .plus div img{
+    max-width: 3rem;
+}
+footer .plus div a{
+    color: white;
+}
+footer .curriculum{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
