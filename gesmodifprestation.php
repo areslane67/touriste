@@ -31,7 +31,7 @@ include_once("./src/prestacheck.inc.php");
                     <ul>
                         <h2>{$user['libelet']}</h2>
                         <li> <img src='{$user['image']}' alt='Image de la prestation'> </li>
-                        <li> <p><strong>Tarif:</strong> {$user['tarif']} </p> </li>
+                        <li> <p><strong>Tarif:</strong> {$user['tarif']} €</p> </li>
                         <li> <p><strong>Note:</strong> {$user['note']} </p> </li>
                         <li> <p><strong>Description:</strong> {$user['description']} </p> </li>
                     </ul>

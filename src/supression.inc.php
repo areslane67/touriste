@@ -2,31 +2,35 @@
 include_once("./data.inc.php");
 include_once("./connexion.inc.php");
 
+// Vérifie si l'utilisateur est connecté
 if(isset($_SESSION['user_id'])){
-    if(!isset($_bdd)) {
-        echo "Erreur : La connexion à la base de données n'est pas établie.";
-        exit;
-    }
+    try {
+        $user_id = $_SESSION['user_id'];
 
-    $id_utilisateur = $_SESSION['user_id'];
+        // Supprimer les prestations associées à l'utilisateur
+        $stmt_delete_prestations = $_bdd->prepare("DELETE FROM prestation WHERE utilisateur_id = ?");
+        $stmt_delete_prestations->execute([$user_id]);
 
-    $requete = $_bdd->prepare("DELETE FROM utilisateur WHERE id = :id_utilisateur");
-    $requete->bindParam(':id_utilisateur', $id_utilisateur);
+        // Supprimer l'utilisateur
+        $stmt_delete_user = $_bdd->prepare("DELETE FROM utilisateur WHERE id = ?");
+        $stmt_delete_user->execute([$user_id]);
 
-    if($requete->execute()) {
+        // Détruire la session
         $_SESSION = array();
         if(isset($_COOKIE[session_name()])){
             setcookie(session_name(), '', time() - 86400, '/');
         }
         session_destroy();
 
+        // Rediriger vers une autre page après la suppression
         header("Location: ../index.php");
         exit;
-    } else {
-        echo "Erreur de requête SQL : " . $requete->errorInfo()[2];
-        exit;
+    } catch(PDOException $e) {
+        // Gérer les erreurs PDO
+        echo "Erreur: " . $e->getMessage();
     }
 } else {
+    // Rediriger vers une page d'erreur si l'utilisateur n'est pas connecté
     header("Location: erreur.php");
     exit;
 }

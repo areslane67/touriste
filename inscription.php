@@ -22,6 +22,8 @@
                             <option value="prestataire">prestataire</option>
                             <option value="admin">admin</option>
                         </select>
+                        <label>Photo</label>
+                        <input type="url" name="img" aria-labelledby="URL"  id="img" placeholder="img">
                         <label>Nom*</label>
                         <input type="text" name="nom" aria-labelledby="Nom"  id="Nom" placeholder="nom" aria-required="true">
                         <label>Prénom*</label>

@@ -8,8 +8,8 @@
         return $count > 0;
     }
 
-    function send_data($nom, $prenom, $mail, $adresse, $mdp, $ville, $pays, $tel, $role, $siret, $_bdd){
-        $req = $_bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, adresse, mdp, Ville, Pays, tel, role, siret)VALUES(?,?,?,?,?,?,?,?,?,?)');
-        $req->execute(array($nom, $prenom, $mail, $adresse, $mdp, $ville, $pays, $tel, $role, $siret));
+    function send_data($img, $nom, $prenom, $mail, $adresse, $mdp, $ville, $pays, $tel, $role, $siret, $_bdd){
+        $req = $_bdd->prepare('INSERT INTO utilisateur (img, nom, prenom, mail, adresse, mdp, Ville, Pays, tel, role, siret)VALUES(?,?,?,?,?,?,?,?,?,?,?)');
+        $req->execute(array($img, $nom, $prenom, $mail, $adresse, $mdp, $ville, $pays, $tel, $role, $siret));
     }
 ?>

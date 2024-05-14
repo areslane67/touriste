@@ -31,6 +31,10 @@ include_once("./src/update.php");
             <label for="mail">Email:</label>
             <input type="email" id="mail" name="mail" value="<?php echo $_SESSION['mail']; ?>">
         </div>
+        <div>
+            <label for="img">photo:</label>
+            <input type="url" id="img" name="img" value="<?php echo $_SESSION['img']; ?>">
+        </div>
     </div>
 
         <h2>Informations personnelles</h2>

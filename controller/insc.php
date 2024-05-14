@@ -25,7 +25,7 @@ if(isset($_POST['mail']) || isset($_POST['mdp'])){
                 echo "<p class=\"warning\">Le champ siret est obligatoire pour les prestataires</p>";
             } else {
                 // Sinon, tous les champs sont valides, on peut envoyer les données
-                send_data($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['adresse'], password_hash($_POST['mdp'], PASSWORD_DEFAULT), $_POST['Ville'], $_POST['Pays'], $_POST['tel'], $_POST['role'], $_POST['siret'], $_bdd);
+                send_data($_POST['img'], $_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['adresse'], password_hash($_POST['mdp'], PASSWORD_DEFAULT), $_POST['Ville'], $_POST['Pays'], $_POST['tel'], $_POST['role'], $_POST['siret'], $_bdd);
                 // Redirection vers la page de connexion
                 header("Location: connexion.php");
                 exit;

@@ -14,6 +14,7 @@ if(isset($_POST["update"])) {
         }
 
         // Récupérez les nouvelles informations de l'utilisateur depuis le formulaire
+        $img = $_POST['img'];
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $mail = $_POST['mail'];
@@ -26,14 +27,15 @@ if(isset($_POST["update"])) {
         $user_id = $_SESSION['user_id'];
 
         // Préparez la requête de mise à jour
-        $query = $_bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, adresse = ?, Ville = ?, Pays = ?, tel = ? WHERE id = ?');
+        $query = $_bdd->prepare('UPDATE utilisateur SET img = ?, nom = ?, prenom = ?, mail = ?, adresse = ?, Ville = ?, Pays = ?, tel = ? WHERE id = ?');
 
         // Exécutez la requête avec les nouvelles informations
-        $query->execute([$nom, $prenom, $mail, $adresse, $ville, $pays, $tel, $user_id]);
+        $query->execute([$img, $nom, $prenom, $mail, $adresse, $ville, $pays, $tel, $user_id]);
 
         // Vérifiez si la requête a été exécutée avec succès
         if($query->rowCount() > 0) {
             // Mettez à jour les informations dans la session
+            $_SESSION['img'] = $img;
             $_SESSION['nom'] = $nom;
             $_SESSION['prenom'] = $prenom;
             $_SESSION['mail'] = $mail;

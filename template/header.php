@@ -3,9 +3,19 @@
             <a href="./index.php"><img src="./assets/scary_halloween_dead_danger_skull_gaming_controller_console_game_icon_262396.png" alt="icon menu"></a>
         </div>
         <div class="burger-menu">
-            <div class="burger" onclick="toggleMenu()">
-                <img src="./assets/menu_circular_button_burger_icon_124214.png" alt="img">
-            </div>
+        <div class="burger" onclick="toggleMenu()">
+            <?php
+            if(isset($_SESSION['img']) && !empty($_SESSION['img'])) {
+                // Si $_SESSION['img'] est défini et non vide, afficher l'image de la session
+                echo '<img src="' . $_SESSION['img'] . '" class="up">';
+            } else {
+                // Sinon, afficher l'image par défaut
+                echo '<img src="./assets/1486485581-account-audience-person-customer-profile-user_81164.png" class="up">';
+            }
+            ?>
+            <img src="./assets/down_angle_icon_194685.png" alt="img" class="down">
+        </div>
+
             <ul class="menu" id="menu">
                 <?php
                 // Vérifier si une session est ouverte

@@ -1,6 +1,5 @@
 <?php
 include_once "./src/prestasess.php";
-include_once("./src/prestacheck.inc.php");
 
 // Ensuite, vous pouvez vérifier l'état de la session
 ?>
@@ -31,7 +30,7 @@ include_once("./src/prestacheck.inc.php");
                             <li> <img src='{$prestation['image']}' alt='Image de la prestation'> </li>
                             <div class=\"right\"> <!-- Ajoutez une classe pour la mise en forme à droite -->
                                 <h2> Titre: {$prestation['libelet']}</h2>
-                                <li> <p><strong>Tarif:</strong> {$prestation['tarif']} </p> </li>
+                                <li> <p><strong>Tarif:</strong> {$prestation['tarif']} €</p> </li>
                                 <li> <p><strong>Note:</strong> {$prestation['note']} </p> </li>
                                 <li> <p><strong>Description:</strong> {$prestation['description']} </p> </li>
                             </div>
@@ -47,8 +46,6 @@ include_once("./src/prestacheck.inc.php");
     <?php
     include_once("./template/footer.php");
     ?>
-
-    <script src="./js/click.js"></script>
 
 </body>
 </html>

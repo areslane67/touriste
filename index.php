@@ -24,13 +24,13 @@ include_once "./src/connexion.inc.php";
 
         echo "
 
-        <section class=\"presta\"> 
+        <section class=\"presta\" data-uid=" . $prestation['id-presta'] . "> 
             <ul>
 
             <h2>{$prestation['libelet']}</h2>
 
             <li> <img src='{$prestation['image']}' alt='Image de la prestation'> </li>
-            <li> <p><strong>Tarif:</strong> {$prestation['tarif']} </p> </li>
+            <li> <p><strong>Tarif:</strong> {$prestation['tarif']} €</p> </li>
             <li> <p><strong>Note:</strong> {$prestation['note']} </p> </li>
             <li> <p><strong>Description:</strong> {$prestation['description']} </p> </li>
             </ul>
@@ -44,5 +44,8 @@ include_once "./src/connexion.inc.php";
     <?php
     include_once("./template/footer.php");
     ?>
+
+        <script src="./js/presta.js"></script>
+
 </body>
 </html>
