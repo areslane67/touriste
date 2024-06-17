@@ -1,8 +1,8 @@
 <?php
-include_once ("./src/session.inc.php");
-include_once("./src/data.inc.php");
-include_once("./src/addpresta.inc.php");
-include_once("./src/prestacheck.inc.php");
+include_once ("../controller/session.inc.php");
+include_once("../controller/data.inc.php");
+include_once("../model/addpresta.inc.php");
+include_once("../controller/prestacheck.inc.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,17 +11,17 @@ include_once("./src/prestacheck.inc.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    include_once("./template/css.php");
+    include_once("../template/css.php");
     ?>
     <title>Document</title>
 </head>
 <body>
     <?php
-    include_once "./template/header.php";
+    include_once "../template/header.php";
     ?>
     <main class="profil">
     <?php
-    include_once "./template/nav.php";
+    include_once "../template/nav.php";
     ?>
         <form method="post" class="mdp">
 
@@ -34,6 +34,7 @@ include_once("./src/prestacheck.inc.php");
             <div>
                 <label>tarif*</label>
                 <input type="text" name="tarif" aria-labelledby="tarif"  id="tarif" placeholder="tarif" aria-required="true">
+                <?php echo "<p class='error'>$error_message</p>"; ?>
             </div>
             <div>
                 <label>description*</label>
@@ -41,14 +42,14 @@ include_once("./src/prestacheck.inc.php");
             </div>
             <div>
                 <label>image*</label>
-                <input type="url" id="URL" name="image" placeholder="URL" aria-required="true" required>
+                <input type="url" id="URL" name="photo" placeholder="URL" aria-required="true" required>
             </div>
                 <input class="ok" type="submit" aria-label="Envoyer" value="CREE VOTTR prestation" id="ex">
                 
         </form>   
     </main>
     <?php
-    include_once("./template/footer.php");
+    include_once("../template/footer.php");
     ?>
 </body>
 </html>

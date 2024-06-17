@@ -1,6 +1,6 @@
 <?php 
-include_once ("./src/session.inc.php");
-include_once ("./src/mdp.inc.php");
+include_once ("../controller/session.inc.php");
+include_once ("../controller/mdp.inc.php");
 
 ?>
 
@@ -10,18 +10,18 @@ include_once ("./src/mdp.inc.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    include_once("./template/css.php");
+    include_once("../template/css.php");
     ?>
     <title>Document</title>
 </head>
 <body>
 <?php
-    include_once "./template/header.php";
+    include_once "../template/header.php";
     ?>
     <main class="profil">
 
     <?php
-    include_once "./template/nav.php";
+    include_once "../template/nav.php";
     ?>
 
     <form method="post" class="mdp">
@@ -45,7 +45,7 @@ include_once ("./src/mdp.inc.php");
     </form>
     </main>
 <?php
-    include_once("./template/footer.php");
+    include_once("../template/footer.php");
     ?>
 </body>
 </html>
